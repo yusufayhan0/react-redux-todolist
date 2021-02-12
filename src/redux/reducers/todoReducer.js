@@ -14,7 +14,7 @@ export const reducer=(state=INITIAL_STATE,action)=>{
     switch (action.type) {
         case actionType.EKLE:
             return {...state,liste:[...state.liste,{
-                id:state.liste.length+1,
+                id:state.liste[state.liste.length-1].id+1,
                 baslik:action.payload,
                 tamamlandi:false
             } ]}
